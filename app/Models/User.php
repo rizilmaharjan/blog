@@ -17,11 +17,7 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
+   
 
     /**
      * The attributes that should be hidden for serialization.
@@ -42,4 +38,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function socialMedia(){
+        // when the laravel convention is not followed we have to pass the extra arguments i.e pivot table name and column names of those pivot table
+                                    // whatever we have here its foreign key will be in last
+        return $this->belongsToMany(SocialMedia::class, 'user_social_media', 'user_id', 'social_media_id')
+        ->withTimestamps();
+    }
 }
