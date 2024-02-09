@@ -18,6 +18,8 @@ class Menu extends Model
         'layout' =>MenuLayoutEnum::class
     ];
 
+    // self refrencing relationship
+
     public function children(): HasMany
     {
         return $this->hasMany(Menu::class, 'parent_id');
