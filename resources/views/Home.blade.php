@@ -54,15 +54,19 @@
 
 
                             <div class="col-span-3">
-                               <x-article.list-item title="The first article" />
+                               <x-article.grid title="The first article" />
                                <div class="grid grid-cols-2 gap-8 mt-8">
-                                   <x-article.list-item title="The first article" />
-                                   <x-article.list-item title="The first article" />
-                                   <x-article.list-item title="The first article" />
-                                   <x-article.list-item title="The first article" />
-                                   <x-article.list-item title="The first article" />
-                                   <x-article.list-item title="The first article" />
+                                   <x-article.grid title="The first article" />
+                                   <x-article.grid title="The first article" />
+                                   <x-article.grid title="The first article" />
+                                   <x-article.grid title="The first article" />
+                                   <x-article.grid title="The first article" />
+                                   <x-article.grid title="The first article" />
 
+                               </div>
+                               <div class="flex items-center justify-center mt-8">
+                                <button class="bg-theme w-32 text-white px-4 py-2 rounded shadow-sm">previous</button>
+                                <button class="bg-theme w-32 text-white px-4 py-2 ml-2 rounded shadow-sm">Next    </button>
                                </div>
                             </div>
                             <div class="col-span-1 space-y-8">
@@ -71,11 +75,31 @@
                                 </x-sidebar-card>
                                 
                                 <x-sidebar-card title="Recent">
-                                    content2    
+                                    <x-article.list title="The first article" />
+                                    <x-article.list title="The first article fasdfasdfasdf fsadfhasd fasfhdsdahf" />
+ 
                                 </x-sidebar-card>
                                 
                                 <x-sidebar-card title="Popular">
-                                    content3   
+                                    <x-article.list title="The first article" />
+                                    <x-article.list title="The first article fasdfasdfasdf fsadfhasd fasfhdsdahf" />
+   
+                                </x-sidebar-card>
+                                <x-sidebar-card title="Tags">
+                                    <div class="space-y-2">
+                                        <a href="#" class="py-2 flex items-center gap-2 text-gray-600 border-b border-gray-200">
+                                            <x-icons.chevron class="w-3 h-3" />
+                                            <div>Building</div>
+                                        </a>
+                                        <a href="#" class="py-2 flex items-center gap-2 text-gray-600 border-b border-gray-200">
+                                            <x-icons.chevron class="w-3 h-3" />
+                                            <div>Building</div>
+                                        </a>
+                                        <a href="#" class="py-2 flex items-center gap-2 text-gray-600 border-b border-gray-200">
+                                            <x-icons.chevron class="w-3 h-3" />
+                                            <div>Building</div>
+                                        </a>
+                                    </div>
                                 </x-sidebar-card>
                                 
                             </div>

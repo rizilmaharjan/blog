@@ -8,6 +8,6 @@ class HomeController extends Controller
 {
     public function __invoke(Request $req)
     {
-        return view('welcome');
+        return view('Home');
     }
 }
