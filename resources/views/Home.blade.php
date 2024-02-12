@@ -44,10 +44,48 @@
             <div>
 
                 <x-container class="bg-white">
-                    <div class="py-8 border-b">
+                    <div class="py-8">
 
                         <div class="text-4xl text-center font-bold">CATALYST</div>
                     </div>
+                    <nav class="border-b border-t">
+                        <ul class="flex items-center justify-center gap-4 relative">
+                            <li>
+                                <x-navbar.list title="Home" link="#" />
+                            </li>
+                            <li>
+                                <x-navbar.list title="Documentation" link="#" />
+                            </li>
+                            <li class="group">
+                                <div class="flex items-center gap-1">
+
+                                    <x-navbar.list title="sub menu" link="#" />
+                                    <x-icons.chevron-down class="w-4 h-4" />
+                                </div>
+                                <div class="absolute top-14 z-10 bg-white w-[200px] shadow hidden group-hover:block">
+                                    <x-navbar.list title="Home" link="#" class="border-b" />
+                                    <x-navbar.list title="Home" link="#" class="border-b" />
+                                    <x-navbar.list title="Home" link="#" class="border-b" />
+                                    <x-navbar.list title="Home" link="#" class="border-b" />
+
+                                </div>
+                            </li>
+                            <li class="group">
+                                <div class="flex items-center gap-1">
+
+                                    <x-navbar.list title="sub menu with image" link="#" />
+                                    <x-icons.chevron-down class="w-4 h-4" />
+                                </div>
+                                <div class="absolute top-14 left-0 z-10 bg-white min-w-full shadow invisible group-hover:visible flex  justify-center gap-4 ">
+                                    <x-navbar.grid title="Home" link="#" />
+                                    <x-navbar.grid title="Home" link="#" />
+                                    {{-- <x-navbar.grid title="Home" link="#" class="border-b" />
+                                    <x-navbar.grid title="Home" link="#" class="border-b" /> --}}
+
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
 
                     <div class="py-8">
                         <div class="grid grid-cols-4 gap-8">
@@ -87,18 +125,10 @@
                                 </x-sidebar-card>
                                 <x-sidebar-card title="Tags">
                                     <div class="space-y-2">
-                                        <a href="#" class="py-2 flex items-center gap-2 text-gray-600 border-b border-gray-200">
-                                            <x-icons.chevron class="w-3 h-3" />
-                                            <div>Building</div>
-                                        </a>
-                                        <a href="#" class="py-2 flex items-center gap-2 text-gray-600 border-b border-gray-200">
-                                            <x-icons.chevron class="w-3 h-3" />
-                                            <div>Building</div>
-                                        </a>
-                                        <a href="#" class="py-2 flex items-center gap-2 text-gray-600 border-b border-gray-200">
-                                            <x-icons.chevron class="w-3 h-3" />
-                                            <div>Building</div>
-                                        </a>
+                                        <x-tags.list />
+                                        <x-tags.list />
+                                        <x-tags.list />
+                                        
                                     </div>
                                 </x-sidebar-card>
                                 
