@@ -1,4 +1,4 @@
-<a class="relative overflow-hidden block" href="#">
+<a class="relative overflow-hidden block" href="{{ route('articles.show', 'article-slug') }}">
     <img src="https://4.bp.blogspot.com/-TDoUeEz_iGI/Wf8eItNC3aI/AAAAAAAAA6U/CM2Ztmr-czQOjoeivWCL60hGNfiRtNSPgCLcBGAs/s1600/pexels-photo-532571.jpeg" class="h-[26rem] object-cover w-full hover:scale-125 transition-all ease-in-out duration-300" alt="blog title">
     <div class="absolute bottom-0 left-0 p-8 bg-black/30 w-full">
 
