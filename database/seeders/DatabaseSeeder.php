@@ -20,6 +20,8 @@ class DatabaseSeeder extends Seeder
 
         ]);
 
+        $this->call(SocialMediaSeeder::class);
+
 
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
