@@ -7,7 +7,7 @@
 
     <div class="py-12">
         <x-admin::container>
-            <x-admin::primary-button  :href="route('admin.users.create')">
+            <x-admin::primary-button :href="route('admin.users.create')">
                 Add new
             </x-admin::primary-button>
 
