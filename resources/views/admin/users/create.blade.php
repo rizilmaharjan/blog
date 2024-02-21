@@ -20,6 +20,7 @@
                         <x-admin::input-group type="email" name="email" :label="__('Email')" required />
                         <x-admin::input-group type="password" name="password" :label="__('Password')" required />
                         <x-admin::input-group type="password" name="password_confirmation" :label="__('Confirm Password')" required />
+                        <x-admin::select-group :items="$types" name="type" label="User Type" />
                         <div class="col-span-2">
                             <x-admin::textarea-group type="password" name="description" :label="__('Description')" required />
 

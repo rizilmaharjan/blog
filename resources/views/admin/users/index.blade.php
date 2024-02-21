@@ -30,6 +30,9 @@
                                 {{ $user->email }}
                             </x-admin::table.td>
                             <x-admin::table.td>
+                                {{ $user->type->name }}
+                            </x-admin::table.td>
+                            <x-admin::table.td>
                                 {{ $user->created_at->toDayDateTimeString() }}
                             </x-admin::table.td>
                             <x-admin::table.td>
@@ -46,7 +49,11 @@
                         </x-admin::table.tr>
                     @endforeach
                 </x-admin::table>
+                <div class="mt-4">
 
+                    {{ $users->links() }}
+                    
+                </div>
             </x-admin::card>
         </x-admin::container>
     </div>
