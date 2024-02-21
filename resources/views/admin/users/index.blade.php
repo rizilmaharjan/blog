@@ -40,9 +40,13 @@
                                     <a href="{{ route('admin.users.edit', $user) }}">
                                         <x-icons.edit class="w-5 h-5 text-blue-500" />
                                     </a>
-                                    <button>
-                                        <x-icons.trash class="w-5 h-5 text-red-500" />
-                                    </button>
+                                    <form class="flex" action="{{ route('admin.users.destroy', $user) }}" method="post" x-data x-ref="deleteForm" x-on:submit.prevent="() => confirm('Are you sure, you want to delete this user?') ? $refs.deleteForm.submit():null" >
+                                        @csrf
+                                        @method('DELETE')
+                                        <button>
+                                            <x-icons.trash class="w-5 h-5 text-red-500" />
+                                        </button>
+                                    </form>
                                 </div>
                             </x-admin::table.td>
 
