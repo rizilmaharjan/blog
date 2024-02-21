@@ -67,6 +67,14 @@ class User extends Authenticatable
         return $this->hasMany(Article::class, 'user_id');
 
     }
+
+    public function deleteImage():void
+    {
+        if($this->image)
+        {
+            Storage::delete($this->image);
+        }
+    } 
 }
 
 

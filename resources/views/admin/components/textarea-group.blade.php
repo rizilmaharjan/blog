@@ -2,6 +2,7 @@
     'name',
     'id' => null,
     'label' => '',
+    'value' => null
 ])
 
 @php
@@ -15,5 +16,5 @@
     @endif
     <textarea {!! $attributes->merge([
         'class' => 'border-gray-300 w-full focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm',
-    ]) !!} name="{{ $name }}" rows="10">{{ old($name) }}</textarea>
+    ]) !!} name="{{ $name }}" rows="10">{{ old($name, $value) }}</textarea>
 </div>

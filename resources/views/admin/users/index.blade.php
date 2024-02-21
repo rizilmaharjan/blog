@@ -37,7 +37,7 @@
                             </x-admin::table.td>
                             <x-admin::table.td>
                                 <div class="flex items-center gap-3">
-                                    <a href="#">
+                                    <a href="{{ route('admin.users.edit', $user) }}">
                                         <x-icons.edit class="w-5 h-5 text-blue-500" />
                                     </a>
                                     <button>

@@ -2,7 +2,8 @@
     'name',
     'id' => null,
     'label' => '',
-    'items'
+    'items',
+    'value' => null
 ])
 @php
 
@@ -21,7 +22,7 @@
         ]) }}>
         <option value="">Select</option>
         @foreach ($items as $item)
-            <option value="{{ $item->value }}" @if ($item->value == old($name)) selected
+            <option value="{{ $item->value }}" @if ($item->value == old($name, $value)) selected
                 
             @endif>{{ $item->name }}</option>
         @endforeach
