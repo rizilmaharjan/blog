@@ -31,7 +31,8 @@
                         <x-admin::input-group type="email" name="email" :label="__('Email')" :value="$user->email"
                             required />
                         <x-admin::input-group type="password" name="password" :label="__('Password')" :required="!$user->exists" />
-                        <x-admin::input-group type="password" name="password_confirmation" :label="__('Confirm Password')" :required="!$user->exists" />
+                        <x-admin::input-group type="password" name="password_confirmation" :label="__('Confirm Password')"
+                            :required="!$user->exists" />
                         <x-admin::select-group :items="$types" name="type" label="User Type" :value="$user->type->value" />
                         <div class="col-span-2">
                             <x-admin::textarea-group type="password" name="description" :label="__('Description')"
